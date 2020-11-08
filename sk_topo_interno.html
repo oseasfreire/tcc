@@ -1,0 +1,65 @@
+<div class="topo_geral">
+        Sistema ERP
+    </div>
+
+    <div class="geral">
+    	<div style="height: 100px;">
+
+	        <?php if($_SESSION['tipo'] == "3") { ?>
+		        <div class="dropdown6 float">
+					<a href="principal.php" class="dropbtn">Principal</a>
+				</div>
+		        <div class="dropdown float">
+				  <button class="dropbtn">Cadastros</button>
+				  <div class="dropdown-content">
+				    <a href="funcionarios.php">Funcionários</a>
+				    <a href="#">Estoque</a>
+				  </div>
+				</div>
+				<div class="dropdown5 float">
+					<a href="#" class="dropbtn">Compras</a>
+				</div>
+				<div class="dropdown5 float">
+					<a href="#" class="dropbtn">Relatórios</a>
+				</div>
+			<?php } else if($_SESSION['tipo'] == "2") { ?>
+				<div class="dropdown6 float">
+					<a href="principal.php" class="dropbtn">Principal</a>
+				</div>
+				<div class="dropdown float">
+				  <button class="dropbtn">Cadastros</button>
+				  <div class="dropdown-content">
+				    <a href="#">Produtos</a>
+				    <a href="#">Clientes</a>
+				  </div>
+				</div>
+			<?php } else { ?>
+				<div class="dropdown6 float">
+					<a href="principal.php" class="dropbtn">Principal</a>
+				</div>
+				<div class="dropdown float">
+				  <button class="dropbtn">Cadastros</button>
+				  <div class="dropdown-content">
+				    <a href="#">Cliente</a>
+				  </div>
+				</div>
+				<div class="dropdown5 float">
+					<a href="#" class="dropbtn">Compras</a>
+				</div>
+				<div class="dropdown5 float">
+					<a href="#" class="dropbtn">Relatórios</a>
+				</div>
+			<?php } ?>
+			<div class="dropdown4 float">
+				<a href="logout.php" class="dropbtn">Sair</a>
+			</div>
+
+	        <div class="limpa"></div>
+	    </div>
+		<div class="limpa"></div>
+
+        <div class="separador"></div>
+        Bem vindo <?php echo $_SESSION['nome']; ?>
+        <div class="separador"></div>
+    </div>
+</div>
